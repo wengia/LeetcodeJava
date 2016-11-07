@@ -1,7 +1,7 @@
 package solution;
 
 public class LongestPalindromicSubstring {
-
+	// Time O(n * n), Space O(1)
 	public String longestPalindrome(String s) {
         if (s == null || s.length() <= 1) return s;
         int start = 0, end = 0;
@@ -28,6 +28,7 @@ public class LongestPalindromicSubstring {
         return s.substring(start, end);
     }
 	
+	// Time O(n*n), Space O(n)
 	public String longestPalindrome_dp(String s) {
         if (s == null || s.length() <= 1) return s;
         int start = 0, end = 0, cur = 0;
