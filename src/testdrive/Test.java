@@ -1,6 +1,6 @@
 package testdrive;
 
-import java.util.List;
+import java.util.*;
 
 public class Test {
 	public static void main(String args[]) {
