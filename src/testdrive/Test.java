@@ -5,9 +5,12 @@ import solution.*;
 
 public class Test {
 	public static void main(String args[]) {
-		int[] nums = new int[]{8,3,5};
-		int[] copy = Arrays.copyOfRange(nums, 0, 6);
-		System.out.println(copy.length + "|" + copy[0]);
+		String[] nums = {"1.11", "2.0.0", "1.2", "2", "0.1", "1.2.1", "1.1.1", "2.0"};
+		
+//		for(String num: nums)
+//			System.out.println(num);
+		
+		int num = 76*97*60 + 9*76*60 + 9 * 60 +60;
+		System.out.println(num);
 	}
-
 }
