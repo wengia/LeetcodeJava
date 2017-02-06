@@ -10,7 +10,7 @@ public class Test {
 //		for(String num: nums)
 //			System.out.println(num);
 		
-		int num = 76*97*60 + 9*76*60 + 9 * 60 +60;
+		int num = 1<<1;
 		System.out.println(num);
 	}
 }
