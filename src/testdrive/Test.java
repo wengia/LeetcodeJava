@@ -10,7 +10,7 @@ public class Test {
 //		for(String num: nums)
 //			System.out.println(num);
 		
-		int num = 1<<1;
-		System.out.println(num);
+		System.out.println(5 | 1);
+		System.out.println(6 | 1);
 	}
 }

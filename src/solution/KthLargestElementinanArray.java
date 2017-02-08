@@ -19,6 +19,6 @@ public class KthLargestElementinanArray {
 		}
 		nums[l] = tmp;
 		if(l == k) return nums[l];
-		return (l < k) ? findKthLargest(nums, k, l + 1, right) : findKthLargest(nums, k, left, l);
+		return (l < k) ? findKthLargest(nums, k, l + 1, right) : findKthLargest(nums, k, left, l - 1);
 	}
 }
