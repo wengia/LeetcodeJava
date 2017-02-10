@@ -10,7 +10,9 @@ public class Test {
 //		for(String num: nums)
 //			System.out.println(num);
 		
-		System.out.println(5 | 1);
+		String path = "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext";
+		
+		System.out.println(path.length());
 		System.out.println(6 | 1);
 	}
 }
