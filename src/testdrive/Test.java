@@ -10,9 +10,10 @@ public class Test {
 //		for(String num: nums)
 //			System.out.println(num);
 		
-		String path = "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext";
+		String start = "AACCGGTT";
+		String end = "AAACGGTA";
+		String[] bank = {"AACCGGTA", "AACCGCTA", "AAACGGTA"};
 		
-		System.out.println(path.length());
-		System.out.println(6 | 1);
+		System.out.println(start);
 	}
 }
