@@ -10,10 +10,9 @@ public class Test {
 //		for(String num: nums)
 //			System.out.println(num);
 		
-		String start = "AACCGGTT";
-		String end = "AAACGGTA";
-		String[] bank = {"AACCGGTA", "AACCGCTA", "AAACGGTA"};
+		ReconstructItinerary test = new ReconstructItinerary();
+		String[][] tickets = new String[][]{{"MUC","LHR"},{"JFK","MUC"},{"SFO","SJC"},{"LHR","SFO"}};
+        System.out.println(test.findItinerary(tickets));
 		
-		System.out.println(start);
 	}
 }
