@@ -2,28 +2,31 @@ package solution;
 
 /* Shortest Palindrome - Hard */
 public class ShortestPalindrome {
+	// KMP, Time O(N)
+	// c a t a c b # b c a t a c
+	// 0 0 0 0 1 0 0 0 1 2 3 4 5
 	public String shortestPalindrome(String s) {
 		if (s == null || s.length() < 2) return s;
-		return "";
-    }
-	
-	// Return the cut
-	public int shortestPalindromeFromBegin(String s) {
-		boolean[][] isPalindrome = new boolean[2][s.length()];
-		int ins = 0;
 		
-		for(; ins < s.length(); ins++) {
-			int cur = (ins & 1);
-			int first = ins + 2; // compare to s[1]
-			int second = ins + 1; // compare to s[0]
-			isPalindrome[cur][first] = (s.charAt(1) == s.charAt(first)) ? 
-					isPalindrome[cur][first - 1] : false;
-			isPalindrome[cur][second] = (s.charAt(0) == s.charAt(second)) ? 
-					isPalindrome[cur][second - 1] : false;
+		// Find cutIdx
+		String kmpString = s + "#" + new StringBuilder(s).reverse().toString();
+		int[] kmpTable = new int[kmpString.length()];
+		for(int pos = 1; pos < kmpString.length(); pos++) {
+			int cnd = kmpTable[pos - 1];
+			while(cnd > 0 && kmpString.charAt(cnd) != kmpString.charAt(pos))
+				cnd = kmpTable[cnd - 1];
+			
+			if (kmpString.charAt(cnd) == kmpString.charAt(pos))
+				cnd++;
+			kmpTable[pos] = cnd;
 		}
 		
-		return 0;
-	}
+		// Construct result;
+		int cutIdx = kmpTable[kmpString.length() - 1];
+		if (cutIdx >= s.length()) return s;
+		
+		return new StringBuilder(s.substring(cutIdx)).reverse().append(s).toString();
+    }
 	
 	// Time O(N^2). No Extra Space
     public String shortestPalindromeBruteForce(String s) {

@@ -1,8 +1,31 @@
 package solution;
 
 public class LongestPalindromicSubstring {
-	// Time O(n * n), Space O(1)
+	// Remove Double check for duplication. Faster
 	public String longestPalindrome(String s) {
+		if (s.length() < 2) return s;
+		
+        int len = s.length(), max_left = 0, max_len = 1, left, right;
+        for (int start = 0; start < len && len - start > max_len / 2;) {
+            left = right = start;
+            while (right < len - 1 && s.charAt(right + 1) == s.charAt(right))
+                ++right;
+            start = right + 1;
+            while (right < len - 1 && left > 0 && s.charAt(right + 1) == s.charAt(left - 1)) {
+                ++right;
+                --left;
+            }
+            if (max_len < right - left + 1) {
+                max_left = left;
+                max_len = right - left + 1;
+            }
+        }
+        return s.substring(max_left, max_left + max_len);
+	}
+	
+	
+	// Time O(n * n), Space O(1)
+	public String longestPalindromeIns(String s) {
         if (s == null || s.length() <= 1) return s;
         int start = 0, end = 0;
         
@@ -37,7 +60,7 @@ public class LongestPalindromicSubstring {
         for (int ins = 0; ins < s.length(); ins++) {
         	cur = (cur == 0) ? 1 : 0;
         	for (int i = s.length() - 1; i >= ins; i--) {
-        		if (ins == 0 || ins ==1)
+        		if (ins == 0 || ins == 1)
         			isPalindrome[cur][i] = (s.charAt(i) == s.charAt(i - ins));
         		else
         			isPalindrome[cur][i] = (s.charAt(i) == s.charAt(i - ins)) ? 
