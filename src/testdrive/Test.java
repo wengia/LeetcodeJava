@@ -13,7 +13,9 @@ public class Test {
 		int[] nums = new int[]{1,1,1,2,2,3};
 		TopKFrequentElements test = new TopKFrequentElements();
 		
-		System.out.println(test.topKFrequent(nums, 2));
+		
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Math.pow(1336, 10) % 1337);
 		
 	}
 }
