@@ -11,11 +11,10 @@ public class Test {
 //			System.out.println(num);
 		
 		int[] nums = new int[]{1,1,1,2,2,3};
-		TopKFrequentElements test = new TopKFrequentElements();
+		IsSubsequence test = new IsSubsequence();
 		
 		
-		System.out.println(Integer.MAX_VALUE);
-		System.out.println(Math.pow(1336, 10) % 1337);
+		System.out.println(test.isSubsequence("abc", "ahbgdc"));
 		
 	}
 }
