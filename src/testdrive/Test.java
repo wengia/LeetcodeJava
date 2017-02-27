@@ -10,11 +10,12 @@ public class Test {
 //		for(String num: nums)
 //			System.out.println(num);
 		
-		int[] nums = new int[]{1,1,1,2,2,3};
+		int[] nums = new int[]{250,145,145,145,145};
 		IsSubsequence test = new IsSubsequence();
 		
-		
-		System.out.println(test.isSubsequence("abc", "ahbgdc"));
+		for(int num: nums) {
+			System.out.println(Integer.toBinaryString(num));
+		}
 		
 	}
 }
