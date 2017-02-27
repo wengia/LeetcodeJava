@@ -11,11 +11,16 @@ public class Test {
 //			System.out.println(num);
 		
 		int[] nums = new int[]{250,145,145,145,145};
-		IsSubsequence test = new IsSubsequence();
+		IntegerReplacement test = new IntegerReplacement();
 		
-		for(int num: nums) {
-			System.out.println(Integer.toBinaryString(num));
-		}
-		
+		double a = 3.0;
+		System.out.println(a);
+		Test.foo(a);
+		System.out.println(a);
+		System.out.println();
+	}
+	
+	public static void foo(Double a) {
+		a = 4.4;
 	}
 }
