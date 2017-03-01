@@ -10,17 +10,10 @@ public class Test {
 //		for(String num: nums)
 //			System.out.println(num);
 		
-		int[] nums = new int[]{250,145,145,145,145};
-		IntegerReplacement test = new IntegerReplacement();
+		int[] nums = new int[]{0,1,3,4,5,7,9,10,14};
+		FrogJump test = new FrogJump();
 		
-		double a = 3.0;
-		System.out.println(a);
-		Test.foo(a);
-		System.out.println(a);
+		System.out.println(test.canCross(nums));
 		System.out.println();
-	}
-	
-	public static void foo(Double a) {
-		a = 4.4;
 	}
 }
