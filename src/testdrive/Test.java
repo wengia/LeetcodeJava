@@ -11,9 +11,15 @@ public class Test {
 //			System.out.println(num);
 		
 		int[] nums = new int[]{0,1,3,4,5,7,9,10,14};
-		FrogJump test = new FrogJump();
+		ConvertaNumbertoHexadecimal test = new ConvertaNumbertoHexadecimal();
 		
-		System.out.println(test.canCross(nums));
-		System.out.println();
+		char ch = 'a' + 10;
+		int mask = (1 << 31) - 1;
+		int i = -10;
+		int j = i & mask;
+		
+		System.out.println(test.toHex(-1));
+		System.out.println(Integer.toBinaryString(i));
+		System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
 	}
 }
