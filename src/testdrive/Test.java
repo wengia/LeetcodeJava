@@ -18,8 +18,9 @@ public class Test {
 		int i = -10;
 		int j = i & mask;
 		
-		System.out.println(test.toHex(-1));
-		System.out.println(Integer.toBinaryString(i));
-		System.out.println(Integer.toBinaryString(Integer.MAX_VALUE));
+//		System.out.println(test.toHex(-1));
+		System.out.println(Integer.toBinaryString(-3));
+		System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
+		System.out.println(Integer.toBinaryString(Integer.MIN_VALUE - 3));
 	}
 }
