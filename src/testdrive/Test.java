@@ -19,7 +19,7 @@ public class Test {
 		int j = i & mask;
 		
 //		System.out.println(test.toHex(-1));
-		System.out.println(Integer.toBinaryString(-3));
+		System.out.println(1 << 1);
 		System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
 		System.out.println(Integer.toBinaryString(Integer.MIN_VALUE - 3));
 	}
