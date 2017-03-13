@@ -17,6 +17,8 @@ public class Test {
 		int mask = (1 << 31) - 1;
 		int i = -10;
 		int j = i & mask;
+		String s= "";
+		String[] token = s.split(" ");
 		
 //		System.out.println(test.toHex(-1));
 		System.out.println(25 ^ 27);
