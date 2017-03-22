@@ -1,5 +1,7 @@
 package solution;
 
+import java.util.Random;
+
 public class KthLargestElementinanArray {
 	public int findKthLargest(int[] nums, int k) {
 		int len = nums.length;
@@ -20,5 +22,31 @@ public class KthLargestElementinanArray {
 		nums[l] = tmp;
 		if(l == k) return nums[l];
 		return (l < k) ? findKthLargest(nums, k, l + 1, right) : findKthLargest(nums, k, left, l - 1);
+	}
+	
+	private Random rand = new Random();
+	private int findKthSmallest(int[] nums, int k, int left, int right) {
+		if(left == right) return nums[left];
+		
+		int pivotIdx = left + rand.nextInt(right - left);
+		int pivotNum = nums[pivotIdx];
+		int l = left, r = right;
+		swap(nums, pivotIdx, r);
+		
+		for(int i = l; i < r; i++) {
+			if (nums[i] < pivotNum)
+				swap(nums, l++, i);
+		}
+		swap(nums, l, r);
+		
+		if(l == k) return nums[l];
+		return (l < k) ? findKthLargest(nums, k, l + 1, right) : findKthLargest(nums, k, left, l - 1);
+	}
+	
+	private void swap(int[] nums, int i, int j) {
+		if (i == j) return;
+		int tmp = nums[i];
+		nums[i] = nums[j];
+		nums[j] = tmp;
 	}
 }
