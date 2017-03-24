@@ -11,18 +11,16 @@ public class Test {
 //			System.out.println(num);
 		
 		int[] nums = new int[]{0,1,3,4,5,7,9,10,14};
-		ConvertaNumbertoHexadecimal test = new ConvertaNumbertoHexadecimal();
 		
-		char ch = 'a' + 10;
-		int mask = (1 << 31) - 1;
-		int i = -10;
-		int j = i & mask;
-		String s= "";
-		String[] token = s.split(" ");
+		RepeatedSubstringPattern test = new RepeatedSubstringPattern();
+		Integer.bitCount(0);
 		
-//		System.out.println(test.toHex(-1));
-		System.out.println(25 ^ 27);
-		System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
-		System.out.println(Integer.toBinaryString(Integer.MIN_VALUE - 3));
+		
+		int mask = 1 << 8;
+		int used = 16 | mask;
+		
+		System.out.println(used);
+		used &= ~mask;
+		System.out.println(used);
 	}
 }
