@@ -12,14 +12,13 @@ public class Test {
 		
 		int[] nums = new int[]{0,1,3,4,5,7,9,10,14};
 		
-		RepeatedSubstringPattern test = new RepeatedSubstringPattern();
-		Integer.bitCount(0);
+		ImplementstrStr test = new ImplementstrStr();
 		
 		
 		int mask = 1 << 8;
 		int used = 16 | mask;
 		
-		System.out.println(used);
+		System.out.println(test.strStrKMP("bbaab", "aab"));
 		used &= ~mask;
 		System.out.println(used);
 	}
